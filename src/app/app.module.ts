@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { LoginModule } from '../login/login.module';
 import { LoginService } from '../login/login.service';
 import { NewResistrationComponent } from './new-registration/new-registration.component';
+import { VisitorRegistrationComponent} from './new-registration/visitor-registration-form/visitor-registration-form.component';
 import { RouteModule } from '../routes/routes.module';
 import { AuthenticationComponent } from './authentication/authentication.component';
 import { environment } from '../environments/environment';
@@ -16,7 +17,8 @@ import { Http } from '@angular/http';
     AppComponent,
     NewResistrationComponent,
     AuthenticationComponent,
-    ApprovedRequestsComponent
+    ApprovedRequestsComponent,
+    VisitorRegistrationComponent
   ],
   imports: [
     BrowserModule,

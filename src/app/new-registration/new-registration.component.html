@@ -1,2 +1,23 @@
-New Resgistration Page
-<a href="" class="notif"><span class="num">2</span></a>
+<div class="container-fluid">
+  <h2>Hi there, Someone visiting in next 30 days?</h2>
+  <button class="btn btn-primary" (click)="newVisitor.VistingIn30Days = true">Yes</button>
+  <button class="btn btn-default" (click)="newVisitor.VistingIn30Days = false">No</button>
+
+  <div *ngIf="newVisitor.VistingIn30Days === true">
+    <h2>Who is visiting?</h2>
+    <button class="btn btn-primary" (click)="newVisitor.VisitorType = visitorTypeEnum.CLIENT">Client</button>
+    <button class="btn btn-primary" (click)="newVisitor.VisitorType =  visitorTypeEnum.FAMILY">Family</button>
+    <button class="btn btn-primary" (click)="newVisitor.VisitorType =  visitorTypeEnum.FRIEND">Friend</button>
+    <button class="btn btn-primary" (click)="newVisitor.VisitorType =  visitorTypeEnum.PERSONALSTAFF">Personal Staff</button>
+  </div>
+
+  <div *ngIf="newVisitor.VisitorType === visitorTypeEnum.CLIENT">
+    <h2>Nationality</h2>
+    <button class="btn btn-primary" (click)="newVisitor.ClientType = clientTypeEnum.INDIAN">Indian</button>
+    <button class="btn btn-primary" (click)="newVisitor.ClientType =  clientTypeEnum.FOREGIN">Foreign</button>
+  </div>
+  <div *ngIf="newVisitor.ClientType > 0">
+    <visitor-registration-form visitor="newVisitor"></visitor-registration-form>
+  </div>
+</div>
+<!-- <a href="" class="notif"><span class="num">2</span></a> -->

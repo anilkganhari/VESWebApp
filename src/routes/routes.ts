@@ -13,25 +13,37 @@ export const routes: Routes = [
     path: 'newRegistration',
     component: NewResistrationComponent,
     canActivate: [RouteGaurdService],
-    data: { title: 'New' }
+    data: { title: 'Dashboard' }
   },
   {
     path: 'inprogress',
     component: NewResistrationComponent,
     canActivate: [RouteGaurdService],
-    data: { title: 'In Progress' }
+    data: { title: 'Visiting' }
   },
   {
     path: 'approved',
     component: ApprovedRequestsComponent,
     canActivate: [RouteGaurdService],
-    data: { title: 'Approved' }
+    data: { title: 'Approvals' }
   },
   {
     path: 'history',
     component: NewResistrationComponent,
     canActivate: [RouteGaurdService],
     data: { title: 'History' }
+  },
+  {
+    path: 'history',
+    component: NewResistrationComponent,
+    canActivate: [RouteGaurdService],
+    data: { title: 'Setttings' }
+  },
+  {
+    path: 'history',
+    component: NewResistrationComponent,
+    canActivate: [RouteGaurdService],
+    data: { title: 'Support' }
   },
   {
     path: '',
