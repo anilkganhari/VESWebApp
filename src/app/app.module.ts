@@ -9,8 +9,10 @@ import { RouteModule } from '../routes/routes.module';
 import { AuthenticationComponent } from './authentication/authentication.component';
 import { environment } from '../environments/environment';
 import { ApprovedRequestsComponent } from './approved-requests/approved-requests.component';
+import { VisitingComponent } from './visiting/visiting.component';
 import { CookieService } from './cookie.service';
 import { Http } from '@angular/http';
+
 // import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { Http } from '@angular/http';
     NewResistrationComponent,
     AuthenticationComponent,
     ApprovedRequestsComponent,
-    VisitorRegistrationComponent
+    VisitorRegistrationComponent,
+    VisitingComponent
   ],
   imports: [
     BrowserModule,

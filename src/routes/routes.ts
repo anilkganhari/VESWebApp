@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { NewResistrationComponent } from '../app/new-registration/new-registration.component';
 import { AuthenticationComponent } from '../app/authentication/authentication.component';
 import { ApprovedRequestsComponent } from '../app/approved-requests/approved-requests.component';
+import { VisitingComponent } from '../app/visiting/visiting.component';
 import { RouteGaurdService} from './route-gaurd.service';
 export const routes: Routes = [
   {
@@ -17,7 +18,7 @@ export const routes: Routes = [
   },
   {
     path: 'inprogress',
-    component: NewResistrationComponent,
+    component: VisitingComponent,
     canActivate: [RouteGaurdService],
     data: { title: 'Visiting' }
   },

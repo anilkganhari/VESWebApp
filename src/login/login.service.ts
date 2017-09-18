@@ -11,7 +11,7 @@ export class LoginService {
   private _producturl = '';
   userLogged = new Subject<any>();
 
-  constructor(private loginURl: string, private http: Http) {
+  constructor(private loginURl: string, private http: Http,) {
 
   }
   sendMessage(message: string) {

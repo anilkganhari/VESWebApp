@@ -24,6 +24,10 @@ export class AppComponent implements OnDestroy {
     });
   }
 
+  get isUserLoggedIn(): boolean {
+    return this._loginService.isUserLoggedin();
+  }
+
   logoutUser() {
     this._loginService.logout();
     this._appRouter.navigateByUrl('/login');
@@ -32,6 +36,5 @@ export class AppComponent implements OnDestroy {
   ngOnDestroy() {
     // unsubscribe to ensure no memory leaks
     this.subscription.unsubscribe();
-
   }
 }

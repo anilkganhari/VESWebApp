@@ -11,6 +11,7 @@ body {
     height: 100%;
 }
 
+
 button,a{
   cursor: pointer;
 }
@@ -18,6 +19,10 @@ button,a{
 .horizontal-center {
     display: flex;
     justify-content: center;
+}
+
+.ves-navbar .nav-pills>li>a{
+  border-radius: 0 !important;
 }
 
 .h-100{
